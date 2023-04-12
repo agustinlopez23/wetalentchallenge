@@ -32,7 +32,7 @@ async function main () {
   console.log('Start seeding ...')
   for (const post of data) {
     const categories = post.categories.map(category => ({ title: category.title }))
-    // delete post.categories
+    delete post.categories
     await prisma.post.create({
       data: {
         ...post,
