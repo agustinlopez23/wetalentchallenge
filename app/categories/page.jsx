@@ -2,7 +2,7 @@
 export default function Categories () {
   return (
     <main>
-      <h1>pagemain</h1>
+      <h1>pagecategories</h1>
     </main>
   )
 }
