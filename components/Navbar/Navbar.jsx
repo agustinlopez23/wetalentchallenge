@@ -1,6 +1,6 @@
 'use client'
 import { Disclosure } from '@headlessui/react'
-import { Bars3Icon, PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Navigation from './Navigation'
 import NavigationDisclousure from './NavigationDisclousure'
 import Button from './Button'
