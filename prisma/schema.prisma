@@ -9,14 +9,14 @@ datasource db {
 
 model Category {
   id            Int             @id @default(autoincrement())
-  title         String?         @db.VarChar(255)
+  title         String?         @unique@db.VarChar(255)
   posts         String?         @db.VarChar(255)
   Post_Category Post_Category[]
 }
 
 model Post {
   id            Int             @id @default(autoincrement())
-  title         String?         @db.VarChar(255)
+  title         String?         @unique@db.VarChar(255)
   content       String?         @db.Text
   categories    String?         @db.VarChar(255)
   Post_Category Post_Category[]
