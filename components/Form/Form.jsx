@@ -1,5 +1,4 @@
 import React from 'react'
-import Buttons from '../Button/Buttons'
 import Allposts from '../Button/Allposts'
 export default function Form () {
   return (
