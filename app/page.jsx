@@ -1,6 +1,6 @@
 import CardBlogList from '@/components/Card/CardBlogList'
 
-export default function Home () {
+export default async function Home () {
   return (
     <main>
 

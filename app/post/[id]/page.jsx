@@ -1,7 +1,6 @@
 'use client'
 import Allposts from '@/components/Button/Allposts'
 import Post from '@/components/PostSection/Post'
-import Link from 'next/link'
 
 export default function Postpage ({ params }) {
   const { id } = params
@@ -9,7 +8,7 @@ export default function Postpage ({ params }) {
   return (
     <>
       <div className='flex flex-col justify-center items-center'>
-        <Post />
+        <Post id={id} />
         <Allposts />
       </div>
     </>

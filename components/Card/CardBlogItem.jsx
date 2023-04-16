@@ -6,13 +6,13 @@ export default function CardBlogItem ({ title, content, categories, id }) {
       <div className='flex items-center gap-x-4 text-xs ' />
       {/* Post container */}
       <div className='group relative'>
-        <h3 className='mt-3 text-xl font-semibold leading-6 text-text group-hover:text-black'>
+        <h3 className='mt-3 text-xl font-semibold leading-6 text-text group-hover:text-black line-clamp-1'>
           <p>
-            <span className='absolute inset-0 text-link' />
+            <span className='absolute inset-0 text-link ' />
             {title}
           </p>
         </h3>
-        <p className='mt-5 line-clamp-5 text-sm leading-6 text-gray-600'>{content}</p>{/* categories container */}
+        <p className='mt-5 line-clamp-3 text-sm leading-6 text-gray-600'>{content}</p>{/* categories container */}
         <div className='flex gap-2'> {categories.map(({ title }) =>
           <p className='relative z-10 py-1.5 text-text font-medium'>{title}
           </p>

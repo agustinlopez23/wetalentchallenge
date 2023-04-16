@@ -7,27 +7,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Category {
-  id            Int             @id @default(autoincrement())
-  title         String?         @unique@db.VarChar(255)
-  posts         String?         @db.VarChar(255)
-  Post_Category Post_Category[]
-}
-
 model Post {
-  id            Int             @id @default(autoincrement())
-  title         String?         @unique@db.VarChar(255)
-  content       String?         @db.Text
-  categories    String?         @db.VarChar(255)
-  Post_Category Post_Category[]
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String
+  categories Category[] @relation("PostCategories")
 }
-
-model Post_Category {
-  post_id     Int
-  category_id Int
-  Post        Post     @relation(fields: [post_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "post_category_ibfk_1")
-  Category    Category @relation(fields: [category_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "post_category_ibfk_2")
-
-  @@id([post_id, category_id])
-  @@index([category_id], map: "category_id")
+model Category {
+  id    Int    @id @default(autoincrement())
+  title String
+  posts Post[] @relation("PostCategories")
 }
