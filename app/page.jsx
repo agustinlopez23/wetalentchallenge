@@ -1,10 +1,11 @@
-import CardBlogItem from '@/components/CardBlogItem'
+import CardBlogList from '@/components/Card/CardBlogList'
 
 export default function Home () {
   return (
     <main>
-      <h1>pagehome</h1>
-      <CardBlogItem />
+
+      <CardBlogList />
+
     </main>
   )
 }
