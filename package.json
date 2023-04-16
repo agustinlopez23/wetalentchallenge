@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "seed": "node ./seeders/seeders.js --trace-warnings"
+    "lint": "next lint"
+   
   },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
