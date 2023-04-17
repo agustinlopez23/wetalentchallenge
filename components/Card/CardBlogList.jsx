@@ -30,7 +30,11 @@ import CardBlogItem from './CardBlogItem'
 // ]
 
 async function getPosts () {
-  const res = await fetch('http://localhost:3000/api/posts')
+  const res = await fetch('http://localhost:3000/api/posts', {
+    next: {
+      revalidate: 60
+    }
+  })
   if (!res.ok) { console.log(res) }
   return res.json()
 }
@@ -41,7 +45,7 @@ export default async function CardBlogList () {
     <div className='py-24 sm:py-32'>
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h2 className='text-3xl font-bold tracking-wider text-accent sm:text-4xl'>All Posts</h2>
+          <h2 className='text-3xl font-bold tracking-wider text-secondary sm:text-4xl'>All Posts</h2>
         </div>
         <div className='mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
           {posts?.map((post) => (

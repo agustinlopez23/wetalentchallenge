@@ -1,4 +1,3 @@
-import Buttons from '@/components/Button/Buttons'
 import Allposts from '@/components/Button/Allposts'
 import CategoryList from '@/components/Categories/CategoryList'
 export default function Categories () {
@@ -11,7 +10,7 @@ export default function Categories () {
           <dt className='text-sm font-medium leading-6 text-gray-900' />
         </dl>
         <CategoryList />
-        <Buttons />
+
         <Allposts />
 
       </div>

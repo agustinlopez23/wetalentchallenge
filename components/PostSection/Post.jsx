@@ -8,7 +8,6 @@ async function getPost (id) {
 }
 export default async function Post ({ id }) {
   const post = await getPost(id)
-  console.log(post)
   return (
 
     <div className='flex flex-col mx-auto max-w-2xl 2xl:max-w-6xl mt-8 sm:mt-32 p-8'>
